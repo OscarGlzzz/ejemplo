@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('Hola-mundo', function(){
+return view('Paginas.Hola-mundo');
+});
+
+Route::get('/videos/{nombre}/{aa?}', function($nombre, $aa = null){
+    return view('Paginas/Grabaciones', compact('nombre', 'aa'));
+    });
